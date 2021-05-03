@@ -1,0 +1,11 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+WordListGenerator.py
+setup.py
+test.txt
+WordListGenerator.egg-info/PKG-INFO
+WordListGenerator.egg-info/SOURCES.txt
+WordListGenerator.egg-info/dependency_links.txt
+WordListGenerator.egg-info/entry_points.txt
+WordListGenerator.egg-info/top_level.txt

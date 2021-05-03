@@ -1,0 +1,101 @@
+Metadata-Version: 2.1
+Name: WordListGenerator
+Version: 0.0.1
+Summary: This package build a custom WordList (BruteForce).
+Home-page: https://github.com/mauricelambert/WordListGenerator
+Author: Maurice Lambert
+Author-email: mauricelambert434@gmail.com
+Maintainer: Maurice Lambert
+Maintainer-email: mauricelambert434@gmail.com
+License: UNKNOWN
+Project-URL: Documentation, https://mauricelambert.github.io/info/python/security/PyWCGIshell.html
+Project-URL: Python exe, https://mauricelambert.github.io/info/python/security/PyWCGIshell.pyz
+Description: # WordListGenerator
+        
+        ## Description
+        This package build a custom WordList (BruteForce).
+        
+        With this WordListGenerator you can build your custom wordlist with:
+         - wordlist in pattern (file)
+         - some specific words/strings (command line)
+         - custom characters enumerator
+         - maximum length/time
+        
+        ## Requirements
+        This package require :
+         - python3
+         - python3 Standard Library
+        
+        ## Installation
+        ```bash
+        pip install WordListGenerator
+        ```
+        
+        ## Usages
+        
+        ### Command line:
+        ```bash
+        WordListGenerator -p "abc%(digits)"
+        python3 -m WordListGenerator --pattern "abc%(ascii_lowercase)"
+        ```
+        
+        ### Python script
+        ```python
+        from WordListGenerator import WordList
+        
+        wordlist = WordList(
+            {
+                "%(abc)": PatternEnumerator("abc", "[a-c]", False, None),
+                "%(file)": PatternEnumerator("file", None, True, "test.txt"),
+            },
+            filename="abc.txt",
+            delimiter="\n",
+            max_words=5,
+            max_time=0.003,
+            encoding="utf-8",
+        )
+        wordlist.run("abc%(abc)%(file)%(digits)")
+        ```
+        
+        ## Command line examples
+        
+        ```bash
+        WordListGenerator -p "abc%(digits)"                    # Default digits enumerator
+        WordListGenerator -p "abc%(ascii_lowercase)"           # Default letters (lower) enumerator
+        WordListGenerator -p "abc%(ascii_uppercase)"           # Default letters (upper) enumerator
+        WordListGenerator -p "abc%(ascii_visible)"             # Default ascii enumerator
+        WordListGenerator -p "abc%(punctuation)"               # Default ascii punctuation enumerator
+        WordListGenerator -e "a=abc" -p "abc%(a)"              # Custom named enumerator (enumerate on "a", "b" and "c") (name: "a")
+        WordListGenerator -e "enumABC=abc" "enum123=123" -p "abc%(enumABC)%(enum123)" # Multiple named enumerators
+        WordListGenerator -e "abc" "123" -p "abc%(abc)%(123)"  # Multiple enumerator (not named)
+        WordListGenerator -e "enumABC=[a-c]" "enum123=[1-3]" -p "abc%(enumABC)%(enum123)" # Using character pattern for enumerator ("[1-3]" = "1", "2" and "3"; "[a-c]" = "a", "b" and "c")
+        WordListGenerator -e "enumABC&CBA=(ABC|CBA)" "enum123=[1-3]" -p "abc%(enumABC&CBA)%(enum123)" # Using word pattern for enumerator ("(ABC|CBA)" = "ABC" and "CBA")
+        WordListGenerator -w "a=test.txt" -p "abc%(a)"                       # Using named wordlist
+        WordListGenerator -e "abc" "123" -m 5 -p "abc%(abc)%(123)"           # Using max length
+        WordListGenerator -e "abc" "123" -t 0.0003 -p "abc%(abc)%(123)"      # Using max time
+        WordListGenerator -e "abc" "123" -f "abc.txt" -p "abc%(abc)%(123)"   # Save in file "abc.txt"
+        WordListGenerator -e "abc" "123" -E "ascii" -p "abc%(abc)%(123)"     # Use ascii encoding
+        WordListGenerator -e "abc" "123" -d "," -p "abc%(abc)%(123)"         # Use custom delimiter
+        ```
+        
+        ## Links
+         - [Github Page](https://github.com/mauricelambert/WordListGenerator/)
+         - [Documentation](https://mauricelambert.github.io/info/python/security/WordListGenerator.html)
+         - [Python executable](https://mauricelambert.github.io/info/python/security/WordListGenerator.pyz)
+         - [Pypi package](https://pypi.org/project/WordListGenerator/)
+        
+        ## Licence
+        Licensed under the [GPL, version 3](https://www.gnu.org/licenses/).
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Topic :: Security
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: MacOS
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
