@@ -1,6 +1,7 @@
 # WordListGenerator
 
 ## Description
+
 This package build a custom WordList (BruteForce).
 
 With this WordListGenerator you can build your custom wordlist with:
@@ -10,11 +11,13 @@ With this WordListGenerator you can build your custom wordlist with:
  - maximum length/time
 
 ## Requirements
+
 This package require :
  - python3
  - python3 Standard Library
 
 ## Installation
+
 ```bash
 pip install WordListGenerator
 ```
@@ -22,12 +25,14 @@ pip install WordListGenerator
 ## Usages
 
 ### Command line:
+
 ```bash
 WordListGenerator -p "abc%(digits)"
 python3 -m WordListGenerator --pattern "abc%(ascii_lowercase)"
 ```
 
 ### Python script
+
 ```python
 from WordListGenerator import WordList
 
@@ -64,13 +69,16 @@ WordListGenerator -e "abc" "123" -t 0.0003 -p "abc%(abc)%(123)"      # Using max
 WordListGenerator -e "abc" "123" -f "abc.txt" -p "abc%(abc)%(123)"   # Save in file "abc.txt"
 WordListGenerator -e "abc" "123" -E "ascii" -p "abc%(abc)%(123)"     # Use ascii encoding
 WordListGenerator -e "abc" "123" -d "," -p "abc%(abc)%(123)"         # Use custom delimiter
+WordListGenerator -e "abc" "123" -p "abc%(abc){3}%(123)"             # Repeat a pattern
 ```
 
 ## Links
+
  - [Github Page](https://github.com/mauricelambert/WordListGenerator/)
  - [Documentation](https://mauricelambert.github.io/info/python/security/WordListGenerator.html)
  - [Python executable](https://mauricelambert.github.io/info/python/security/WordListGenerator.pyz)
  - [Pypi package](https://pypi.org/project/WordListGenerator/)
 
 ## Licence
+
 Licensed under the [GPL, version 3](https://www.gnu.org/licenses/).
