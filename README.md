@@ -1,3 +1,5 @@
+![WordListGenerator logo](https://mauricelambert.github.io/info/python/security/WordListGenerator_small.png "WordListGenerator logo")
+
 # WordListGenerator
 
 ## Description

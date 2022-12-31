@@ -103,7 +103,7 @@ Tests:
 Test passed.
 """
 
-__version__ = "0.2.0"
+__version__ = "0.1.0"
 __author__ = "Maurice Lambert"
 __author_email__ = "mauricelambert434@gmail.com"
 __maintainer__ = "Maurice Lambert"

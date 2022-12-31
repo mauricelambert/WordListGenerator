@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: WordListGenerator
-Version: 0.2.0
+Version: 0.1.0
 Summary: This package builds custom WordLists (for BruteForce).
 Home-page: https://github.com/mauricelambert/WordListGenerator
 Author: Maurice Lambert
@@ -8,9 +8,11 @@ Author-email: mauricelambert434@gmail.com
 Maintainer: Maurice Lambert
 Maintainer-email: mauricelambert434@gmail.com
 License: UNKNOWN
-Project-URL: Documentation, https://mauricelambert.github.io/info/python/security/PyWCGIshell.html
-Project-URL: Python exe, https://mauricelambert.github.io/info/python/security/PyWCGIshell.pyz
-Description: # WordListGenerator
+Project-URL: Documentation, https://mauricelambert.github.io/info/python/security/WordListGenerator.html
+Project-URL: Python exe, https://mauricelambert.github.io/info/python/security/WordListGenerator.pyz
+Description: ![WordListGenerator logo](https://mauricelambert.github.io/info/python/security/WordListGenerator_small.png "WordListGenerator logo")
+        
+        # WordListGenerator
         
         ## Description
         

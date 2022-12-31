@@ -21,8 +21,8 @@ setup(
 
     url = WordListGenerator.__url__,
     project_urls = {
-        "Documentation": "https://mauricelambert.github.io/info/python/security/PyWCGIshell.html",
-        "Python exe": "https://mauricelambert.github.io/info/python/security/PyWCGIshell.pyz",
+        "Documentation": "https://mauricelambert.github.io/info/python/security/WordListGenerator.html",
+        "Python exe": "https://mauricelambert.github.io/info/python/security/WordListGenerator.pyz",
     },
  
     classifiers = [
